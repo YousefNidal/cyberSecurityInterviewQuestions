@@ -184,6 +184,554 @@
     ]
   },
   {
+    "id": "tcp_ip_model",
+    "category": "Networking Fundamentals",
+    "title": "The TCP/IP Model",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "The TCP/IP (Transmission Control Protocol / Internet Protocol) model is the practical, protocol-based networking framework on which the modern Internet runs. It was developed by DARPA for ARPANET in the 1970s and formally described in RFC 1122 and RFC 1123. Unlike the theoretical OSI model, TCP/IP was built from working protocols first, and the model was written to describe them. It defines how data is addressed, transmitted, routed, and received across interconnected networks."
+      },
+      {
+        "heading": "The Four Layers",
+        "body": "1. Application Layer (maps to OSI layers 5-7) — the interface closest to the user. Protocols: HTTP/HTTPS, FTP, SMTP, POP3, IMAP, DNS, SSH, Telnet, SNMP. Data unit: Data.\n2. Transport Layer (OSI layer 4) — end-to-end communication and reliability. Protocols: TCP (reliable, connection-oriented), UDP (fast, connectionless). Data unit: Segment (TCP) / Datagram (UDP).\n3. Internet Layer (OSI layer 3) — logical addressing and routing between networks. Protocols: IPv4, IPv6, ICMP, ARP (glue), OSPF/BGP. Data unit: Packet.\n4. Network Access / Link Layer (OSI layers 1-2) — physical transmission and local delivery. Technologies: Ethernet, Wi-Fi (802.11), ARP, PPP, MAC addressing. Data unit: Frame / Bits."
+      },
+      {
+        "heading": "TCP/IP vs OSI Mapping",
+        "body": "Application       <-> Application, Presentation, Session (OSI 7, 6, 5)\nTransport         <-> Transport (OSI 4)\nInternet          <-> Network (OSI 3)\nNetwork Access    <-> Data Link, Physical (OSI 2, 1)\n\nSome references split Network Access into Data Link + Physical, producing a five-layer TCP/IP model. The four-layer form (RFC 1122) is canonical.\n\nMemory aids — OSI (top-down): All People Seem To Need Data Processing. TCP/IP (top-down): All Internet Traffic Needs Access."
+      },
+      {
+        "heading": "Data Encapsulation",
+        "body": "As data moves down the stack, each layer adds its own header (and the link layer a trailer):\n\nApplication data -> Transport adds TCP/UDP header = Segment -> Internet adds IP header = Packet -> Link adds Ethernet header/trailer = Frame -> Physical converts to Bits.\n\nOn receipt the process reverses (de-encapsulation). Each PDU (Protocol Data Unit) has a different name per layer: Data, Segment, Packet, Frame, Bits."
+      },
+      {
+        "heading": "TCP/IP vs OSI",
+        "body": "TCP/IP: practical, protocol-based, 4 layers, developed before OSI, what the Internet actually uses.\nOSI: theoretical reference model, 7 layers, vendor-neutral, used for teaching and troubleshooting.\n\nSecurity tip: attackers and defenders both reason about layers. A MAC flood is a Layer 2 attack; IP spoofing is Layer 3; a SYN flood is Layer 4; SQL injection is Layer 7."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "Модель TCP/IP (Transmission Control Protocol / Internet Protocol) — практическая, основанная на протоколах сетевая модель, на которой работает современный Интернет. Разработана DARPA для ARPANET в 1970-х годах и формально описана в RFC 1122 и RFC 1123. В отличие от теоретической модели OSI, TCP/IP создавалась от работающих протоколов, а модель была написана для их описания."
+      },
+      {
+        "heading": "Четыре уровня",
+        "body": "1. Прикладной уровень (соответствует уровням OSI 5–7) — интерфейс, ближайший к пользователю. Протоколы: HTTP/HTTPS, FTP, SMTP, POP3, IMAP, DNS, SSH, Telnet, SNMP. Единица данных: Данные.\n2. Транспортный уровень (уровень OSI 4) — сквозная связь и надёжность. Протоколы: TCP (надёжный, с соединением), UDP (быстрый, без соединения). Единица данных: Сегмент (TCP) / Датаграмма (UDP).\n3. Межсетевой уровень (уровень OSI 3) — логическая адресация и маршрутизация между сетями. Протоколы: IPv4, IPv6, ICMP, ARP, OSPF/BGP. Единица данных: Пакет.\n4. Уровень доступа к сети / канальный (уровни OSI 1–2) — физическая передача и локальная доставка. Технологии: Ethernet, Wi-Fi (802.11), ARP, PPP, MAC-адресация. Единица данных: Кадр / Биты."
+      },
+      {
+        "heading": "Соответствие TCP/IP и OSI",
+        "body": "Прикладной        <-> Прикладной, Представительский, Сеансовый (OSI 7, 6, 5)\nТранспортный      <-> Транспортный (OSI 4)\nМежсетевой        <-> Сетевой (OSI 3)\nДоступ к сети     <-> Канальный, Физический (OSI 2, 1)\n\nНекоторые источники разделяют уровень доступа к сети на канальный и физический, получая пятиуровневую модель TCP/IP. Канонической считается четырёхуровневая (RFC 1122).\n\nМнемоника — OSI (сверху вниз): «Пожалуйста Данные Не Трогай, Сессию Представь Аккуратно». Сетевое взаимодействие начинается на прикладном уровне."
+      },
+      {
+        "heading": "Инкапсуляция данных",
+        "body": "При движении данных вниз по стеку каждый уровень добавляет свой заголовок (а канальный — ещё и трейлер):\n\nДанные приложения -> Транспортный добавляет заголовок TCP/UDP = Сегмент -> Межсетевой добавляет заголовок IP = Пакет -> Канальный добавляет заголовок/трейлер Ethernet = Кадр -> Физический преобразует в Биты.\n\nПри приёме процесс идёт в обратном порядке (декапсуляция). Единица данных протокола (PDU) имеет разное имя на каждом уровне: Данные, Сегмент, Пакет, Кадр, Биты."
+      },
+      {
+        "heading": "TCP/IP и OSI",
+        "body": "TCP/IP: практическая, основанная на протоколах, 4 уровня, создана раньше OSI, реально используется в Интернете.\nOSI: теоретическая эталонная модель, 7 уровней, независима от производителей, применяется для обучения и диагностики.\n\nЗаметка по безопасности: и атакующие, и защитники рассуждают по уровням. MAC-флудинг — атака уровня 2; IP-спуфинг — уровня 3; SYN-флуд — уровня 4; SQL-инъекция — уровня 7."
+      }
+    ]
+  },
+  {
+    "id": "tcp_deep_dive",
+    "category": "Networking Fundamentals",
+    "title": "TCP Protocol — Deep Dive",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Transmission Control Protocol (TCP), defined in RFC 793 and updated by RFC 9293, is a connection-oriented, reliable, ordered, full-duplex transport protocol. It breaks data into segments, guarantees delivery via acknowledgments and retransmission, and controls the sending rate. Most of the web (HTTP/HTTPS), email (SMTP/IMAP), and file transfer (FTP/SFTP) run over TCP."
+      },
+      {
+        "heading": "TCP Header",
+        "body": "A TCP header is at least 20 bytes:\n• Source Port / Destination Port (16 bits each)\n• Sequence Number (32 bits) — position of the first data byte in the stream\n• Acknowledgment Number (32 bits) — next byte the sender expects\n• Data Offset, Reserved, Flags\n• Flags: URG, ACK, PSH, RST, SYN, FIN\n• Window Size (16 bits) — flow control / receive buffer\n• Checksum, Urgent Pointer, Options (MSS, SACK, Window Scaling)"
+      },
+      {
+        "heading": "Three-Way Handshake",
+        "body": "1. Client -> Server: SYN (seq=x). Client enters SYN-SENT.\n2. Server -> Client: SYN-ACK (seq=y, ack=x+1). Server enters SYN-RECEIVED.\n3. Client -> Server: ACK (ack=y+1). Both enter ESTABLISHED.\n\nThe handshake synchronizes sequence numbers and confirms both sides are reachable. A half-open connection (SYN received but no final ACK) is the basis of the SYN flood DoS attack."
+      },
+      {
+        "heading": "Connection Termination",
+        "body": "TCP closes with a four-way FIN exchange:\n1. FIN -> 2. ACK -> 3. FIN -> 4. ACK.\nThe side sending the first FIN enters TIME_WAIT (typically 2x MSL) to absorb stray packets. A RST (reset) flag aborts a connection immediately — useful for cleanup, abused for RST injection attacks."
+      },
+      {
+        "heading": "Reliability & Flow Control",
+        "body": "• Sequence & Acknowledgment numbers track every byte.\n• Cumulative ACKs confirm all data up to a point.\n• Retransmission Timeout (RTO) and fast retransmit recover lost segments.\n• Sliding Window lets the receiver advertise how much data it can buffer.\n• Window Scaling (RFC 7323) allows windows larger than 64 KB."
+      },
+      {
+        "heading": "Congestion Control",
+        "body": "TCP adapts to network congestion:\n• Slow Start — window grows exponentially.\n• Congestion Avoidance — grows linearly after the threshold (ssthresh).\n• Fast Retransmit / Fast Recovery — react to 3 duplicate ACKs without waiting for a timeout.\nModern algorithms: CUBIC (Linux default), BBR (Google), Reno, NewReno, Vegas."
+      },
+      {
+        "heading": "Common Attacks",
+        "body": "• SYN Flood: exhaust the connection table with half-open connections.\n• TCP Session Hijacking: inject into an established session.\n• TCP Reset (RST) Injection: forge RST packets to tear down connections.\n• Port Scanning: use handshake behavior (SYN, ACK, FIN) to map open ports.\nDefense: SYN cookies, randomized ISNs, encrypted protocols (TLS), stateful firewalls/IDS."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "Transmission Control Protocol (TCP), определённый в RFC 793 и обновлённый в RFC 9293, — транспортный протокол с установлением соединения, обеспечивающий надёжную, упорядоченную и полнодуплексную передачу. Он разбивает данные на сегменты, гарантирует доставку через подтверждения и повторную передачу, управляет скоростью отправки. Большая часть веба (HTTP/HTTPS), почты (SMTP/IMAP) и передачи файлов (FTP/SFTP) работает поверх TCP."
+      },
+      {
+        "heading": "Заголовок TCP",
+        "body": "Заголовок TCP — минимум 20 байт:\n• Порт источника / Порт назначения (по 16 бит)\n• Порядковый номер (32 бита) — позиция первого байта данных в потоке\n• Номер подтверждения (32 бита) — следующий ожидаемый байт\n• Смещение данных, зарезервировано, флаги\n• Флаги: URG, ACK, PSH, RST, SYN, FIN\n• Размер окна (16 бит) — управление потоком / буфер приёма\n• Контрольная сумма, указатель срочности, параметры (MSS, SACK, масштабирование окна)"
+      },
+      {
+        "heading": "Трёхэтапное рукопожатие",
+        "body": "1. Клиент -> Сервер: SYN (seq=x). Клиент переходит в SYN-SENT.\n2. Сервер -> Клиент: SYN-ACK (seq=y, ack=x+1). Сервер переходит в SYN-RECEIVED.\n3. Клиент -> Сервер: ACK (ack=y+1). Обе стороны в ESTABLISHED.\n\nРукопожатие синхронизирует порядковые номера и подтверждает достижимость обеих сторон. Полуоткрытое соединение (SYN получен, но финального ACK нет) лежит в основе DoS-атаки SYN-флуд."
+      },
+      {
+        "heading": "Завершение соединения",
+        "body": "TCP закрывается четырёхэтапным обменом FIN:\n1. FIN -> 2. ACK -> 3. FIN -> 4. ACK.\nСторона, отправившая первый FIN, переходит в состояние TIME_WAIT (обычно 2x MSL), чтобы поглотить запоздавшие пакеты. Флаг RST (сброс) немедленно прерывает соединение — полезен для очистки, но используется в атаках RST-инъекции."
+      },
+      {
+        "heading": "Надёжность и управление потоком",
+        "body": "• Порядковые номера и номера подтверждения отслеживают каждый байт.\n• Кумулятивные ACK подтверждают все данные до определённой точки.\n• Тайм-аут повторной передачи (RTO) и быстрая повторная передача восстанавливают потерянные сегменты.\n• Скользящее окно позволяет получателю объявлять доступный объём буфера.\n• Масштабирование окна (RFC 7323) допускает окна больше 64 КБ."
+      },
+      {
+        "heading": "Управление перегрузкой",
+        "body": "TCP адаптируется к перегрузке сети:\n• Медленный старт — окно растёт экспоненциально.\n• Предотвращение перегрузки — линейный рост после порога (ssthresh).\n• Быстрая повторная передача / быстрое восстановление — реакция на 3 дублирующих ACK без ожидания тайм-аута.\nСовременные алгоритмы: CUBIC (по умолчанию в Linux), BBR (Google), Reno, NewReno, Vegas."
+      },
+      {
+        "heading": "Распространённые атаки",
+        "body": "• SYN-флуд: исчерпание таблицы соединений полуоткрытыми соединениями.\n• Перехват TCP-сессии: внедрение в установленную сессию.\n• RST-инъекция: подделка пакетов RST для разрыва соединений.\n• Сканирование портов: анализ поведения рукопожатия (SYN, ACK, FIN) для картографирования портов.\nЗащита: SYN cookies, случайные ISN, шифрованные протоколы (TLS), stateful-брандмауэры/IDS."
+      }
+    ]
+  },
+  {
+    "id": "ip_addressing",
+    "category": "Networking Fundamentals",
+    "title": "IPv4 Addressing & Subnetting",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "An IPv4 address is a 32-bit logical identifier written in dotted-decimal form (four octets, 0-255), e.g. 192.168.1.10. Each address is split into a network portion and a host portion. IP is a connectionless, best-effort protocol at OSI Layer 3 — delivery is not guaranteed, which is why TCP sits above it."
+      },
+      {
+        "heading": "Address Classes",
+        "body": "Class A: 1.0.0.0 - 126.255.255.255 (default /8)\nClass B: 128.0.0.0 - 191.255.255.255 (/16)\nClass C: 192.0.0.0 - 223.255.255.255 (/24)\nClass D: 224.0.0.0 - 239.255.255.255 (multicast)\nClass E: 240.0.0.0 - 255.255.255.255 (experimental/reserved)\nModern networks use classless CIDR instead of these legacy classes."
+      },
+      {
+        "heading": "Private & Special Ranges",
+        "body": "RFC 1918 private ranges (not routed on the public Internet):\n• 10.0.0.0/8 (10.0.0.0 - 10.255.255.255)\n• 172.16.0.0/12 (172.16.0.0 - 172.31.255.255)\n• 192.168.0.0/16 (192.168.0.0 - 192.168.255.255)\n\nSpecial:\n• 127.0.0.0/8 — loopback (localhost)\n• 169.254.0.0/16 — APIPA / link-local\n• 100.64.0.0/10 — Carrier-Grade NAT (RFC 6598)\n• 224.0.0.0/4 — multicast; 255.255.255.255 — limited broadcast"
+      },
+      {
+        "heading": "Subnet Mask & CIDR",
+        "body": "A subnet mask is a 32-bit value of contiguous 1s (network) followed by 0s (host). CIDR notation writes the count of network bits after a slash: /24 = 255.255.255.0.\n\nNetwork address = IP AND mask (all host bits 0).\nBroadcast address = all host bits 1 (last address).\nUsable hosts = 2^(32 - prefix) - 2\n\nExample: 192.168.1.0/24 -> network .0, broadcast .255, usable .1 - .254 (254 hosts)."
+      },
+      {
+        "heading": "Common Subnet Sizes",
+        "body": "/24 = 255.255.255.0 — 256 addresses, 254 usable\n/25 = 255.255.255.128 — 128, 126 usable\n/26 = 255.255.255.192 — 64, 62 usable\n/27 = 255.255.255.224 — 32, 30 usable\n/28 = 255.255.255.240 — 16, 14 usable\n/29 = 255.255.255.248 — 8, 6 usable\n/30 = 255.255.255.252 — 4, 2 usable (point-to-point links)\n/31 (RFC 3021) = 2 addresses on point-to-point; /32 = single host route."
+      },
+      {
+        "heading": "Subnetting & VLSM",
+        "body": "Subnetting borrows bits from the host portion to create smaller networks. Dividing 192.168.1.0/24 into four /26 subnets:\n192.168.1.0/26 (.1-.62), 192.168.1.64/26 (.65-.126), 192.168.1.128/26 (.129-.190), 192.168.1.192/26 (.193-.254).\nVLSM (Variable Length Subnet Masking) uses different prefix sizes per subnet to avoid wasting addresses."
+      },
+      {
+        "heading": "Security Relevance",
+        "body": "• IP spoofing relies on the fact that IPv4 source addresses are not authenticated.\n• Subnetting and segmentation limit lateral movement and shrink broadcast domains.\n• Private addressing + NAT hides internal topology.\n• Tools: ping, traceroute, ipcalc, subnet calculators to plan networks."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "IPv4-адрес — 32-битный логический идентификатор, записываемый в десятичной форме с точками (четыре октета, 0–255), например 192.168.1.10. Каждый адрес делится на часть сети и часть узла. IP — протокол без соединения, с доставкой «по возможности» (best-effort) на уровне OSI 3 — доставка не гарантируется, поэтому над ним работает TCP."
+      },
+      {
+        "heading": "Классы адресов",
+        "body": "Класс A: 1.0.0.0 - 126.255.255.255 (по умолчанию /8)\nКласс B: 128.0.0.0 - 191.255.255.255 (/16)\nКласс C: 192.0.0.0 - 223.255.255.255 (/24)\nКласс D: 224.0.0.0 - 239.255.255.255 (многоадресная рассылка)\nКласс E: 240.0.0.0 - 255.255.255.255 (экспериментальный/зарезервированный)\nСовременные сети используют бесклассовую адресацию CIDR вместо этих устаревших классов."
+      },
+      {
+        "heading": "Частные и особые диапазоны",
+        "body": "Частные диапазоны RFC 1918 (не маршрутизируются в публичном Интернете):\n• 10.0.0.0/8 (10.0.0.0 - 10.255.255.255)\n• 172.16.0.0/12 (172.16.0.0 - 172.31.255.255)\n• 192.168.0.0/16 (192.168.0.0 - 192.168.255.255)\n\nОсобые:\n• 127.0.0.0/8 — петлевой интерфейс (localhost)\n• 169.254.0.0/16 — APIPA / link-local\n• 100.64.0.0/10 — Carrier-Grade NAT (RFC 6598)\n• 224.0.0.0/4 — многоадресная; 255.255.255.255 — ограниченная широковещательная"
+      },
+      {
+        "heading": "Маска подсети и CIDR",
+        "body": "Маска подсети — 32-битное значение из непрерывных единиц (сеть) и нулей (узлы). Запись CIDR указывает число сетевых бит после слэша: /24 = 255.255.255.0.\n\nАдрес сети = IP И маска (все биты узла = 0).\nШироковещательный адрес = все биты узла = 1 (последний адрес).\nДоступно узлов = 2^(32 - префикс) - 2\n\nПример: 192.168.1.0/24 -> сеть .0, широковещательный .255, доступные .1 - .254 (254 узла)."
+      },
+      {
+        "heading": "Основные размеры подсетей",
+        "body": "/24 = 255.255.255.0 — 256 адресов, 254 доступно\n/25 = 255.255.255.128 — 128, 126 доступно\n/26 = 255.255.255.192 — 64, 62 доступно\n/27 = 255.255.255.224 — 32, 30 доступно\n/28 = 255.255.255.240 — 16, 14 доступно\n/29 = 255.255.255.248 — 8, 6 доступно\n/30 = 255.255.255.252 — 4, 2 доступно (каналы точка-точка)\n/31 (RFC 3021) = 2 адреса на точка-точка; /32 = маршрут одного узла."
+      },
+      {
+        "heading": "Субсетирование и VLSM",
+        "body": "Субсетирование «занимает» биты у части узла для создания меньших сетей. Разделим 192.168.1.0/24 на четыре подсети /26:\n192.168.1.0/26 (.1-.62), 192.168.1.64/26 (.65-.126), 192.168.1.128/26 (.129-.190), 192.168.1.192/26 (.193-.254).\nVLSM (маски переменной длины) использует разные размеры префикса для каждой подсети, чтобы не тратить адреса впустую."
+      },
+      {
+        "heading": "Значение для безопасности",
+        "body": "• IP-спуфинг основан на том, что адреса источника IPv4 не аутентифицируются.\n• Субсетирование и сегментация ограничивают горизонтальное перемещение и уменьшают широковещательные домены.\n• Частная адресация + NAT скрывает внутреннюю топологию.\n• Инструменты: ping, traceroute, ipcalc, калькуляторы подсетей для планирования сетей."
+      }
+    ]
+  },
+  {
+    "id": "ipv6_fundamentals",
+    "category": "Networking Fundamentals",
+    "title": "IPv6 Fundamentals",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "IPv6 (RFC 8200) uses 128-bit addresses, providing about 3.4 x 10^38 (340 undecillion) unique addresses — solving IPv4 exhaustion. Addresses are written as eight groups of four hexadecimal digits separated by colons, e.g. 2001:0db8:85a3:0000:0000:8a2e:0370:7334."
+      },
+      {
+        "heading": "Notation & Compression",
+        "body": "• Omit leading zeros in each group (0db8 -> db8).\n• Replace one run of consecutive all-zero groups with :: (only once).\n• Example: 2001:db8:85a3::8a2e:370:7334.\n• The /n prefix marks network bits, usually /64 for LANs."
+      },
+      {
+        "heading": "Address Types",
+        "body": "Unicast (one-to-one):\n• Global Unicast — 2000::/3, Internet-routable.\n• Link-Local — fe80::/10, auto-configured per interface, not routed.\n• Unique Local — fc00::/7, private equivalent of RFC 1918.\nMulticast (ff00::/8) — one-to-many.\nAnycast — nearest member of a group.\nThere is NO broadcast in IPv6; multicast and the all-nodes group ff02::1 replace it."
+      },
+      {
+        "heading": "Simplified Header & Features",
+        "body": "• Fixed 40-byte header with extension headers for options.\n• No header checksum (handled by link/transport layers).\n• No NAT required — the address space is large enough for global addressing.\n• Neighbor Discovery Protocol (NDP) over ICMPv6 replaces ARP.\n• SLAAC (Stateless Address Autoconfiguration) and DHCPv6 assign addresses.\n• IPsec support is mandatory to implement."
+      },
+      {
+        "heading": "Transition Mechanisms",
+        "body": "• Dual Stack — run IPv4 and IPv6 simultaneously (most common).\n• Tunneling — carry IPv6 over IPv4 (6to4, Teredo, ISATAP).\n• Translation — NAT64 / DNS64 map IPv6 clients to IPv4 servers."
+      },
+      {
+        "heading": "Security",
+        "body": "• The huge address space makes blind scanning impractical, but systems are still discoverable via DNS, multicast, and logs.\n• IPv6 firewalls are essential — do not rely on NAT for protection.\n• Filter ICMPv6 carefully (blocking it breaks NDP).\n• Watch for rogue Router Advertisements (use RA Guard) and extension-header evasion."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "IPv6 (RFC 8200) использует 128-битные адреса, обеспечивая около 3,4 x 10^38 (340 ундециллионов) уникальных адресов — это решает проблему исчерпания IPv4. Адреса записываются как восемь групп из четырёх шестнадцатеричных цифр через двоеточие, например 2001:0db8:85a3:0000:0000:8a2e:0370:7334."
+      },
+      {
+        "heading": "Запись и сжатие",
+        "body": "• Ведущие нули в группе опускаются (0db8 -> db8).\n• Одна последовательность нулевых групп заменяется на :: (только один раз).\n• Пример: 2001:db8:85a3::8a2e:370:7334.\n• Префикс /n обозначает биты сети, обычно /64 для локальных сетей."
+      },
+      {
+        "heading": "Типы адресов",
+        "body": "Одноадресные (one-to-one):\n• Global Unicast — 2000::/3, маршрутизируются в Интернете.\n• Link-Local — fe80::/10, автоматически назначаются интерфейсу, не маршрутизируются.\n• Unique Local — fc00::/7, частный аналог RFC 1918.\nМногоадресные (ff00::/8) — one-to-many.\nAnycast — ближайший участник группы.\nВ IPv6 НЕТ широковещания; его заменяют многоадресная рассылка и группа всех узлов ff02::1."
+      },
+      {
+        "heading": "Упрощённый заголовок и возможности",
+        "body": "• Фиксированный заголовок 40 байт с заголовками расширений для параметров.\n• Отсутствует контрольная сумма заголовка (её обрабатывают канальный/транспортный уровни).\n• NAT не требуется — адресного пространства достаточно для глобальной адресации.\n• Neighbor Discovery Protocol (NDP) поверх ICMPv6 заменяет ARP.\n• SLAAC (автоконфигурация без состояния) и DHCPv6 назначают адреса.\n• Поддержка IPsec обязательна к реализации."
+      },
+      {
+        "heading": "Механизмы перехода",
+        "body": "• Dual Stack — одновременная работа IPv4 и IPv6 (наиболее распространено).\n• Туннелирование — передача IPv6 через IPv4 (6to4, Teredo, ISATAP).\n• Трансляция — NAT64 / DNS64 переводят IPv6-клиентов к IPv4-серверам."
+      },
+      {
+        "heading": "Безопасность",
+        "body": "• Огромное адресное пространство делает слепое сканирование непрактичным, но системы по-прежнему обнаруживаются через DNS, многоадресную рассылку и журналы.\n• Брандмауэры IPv6 необходимы — нельзя полагаться на NAT для защиты.\n• Фильтровать ICMPv6 нужно осторожно (блокировка ломает NDP).\n• Следите за мошенническими Router Advertisement (RA Guard) и обходом через заголовки расширений."
+      }
+    ]
+  },
+  {
+    "id": "network_devices",
+    "category": "Networking Fundamentals",
+    "title": "Network Devices",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Network devices operate at different OSI layers and perform distinct roles. Understanding them is essential for both network design and security."
+      },
+      {
+        "heading": "Hub (Layer 1)",
+        "body": "A hub is a multiport repeater. It floods every incoming signal to all ports, creating a single collision domain and shared bandwidth. Obsolete; replaced by switches.\nSecurity: anyone can sniff all traffic; no isolation."
+      },
+      {
+        "heading": "Switch (Layer 2)",
+        "body": "A switch forwards frames based on a MAC address table (CAM table) and provides full-duplex, per-port collision domains. Features: VLANs, trunking (802.1Q), port security, STP. Layer 3 switches add routing.\nSecurity: MAC flooding (CAM overflow), VLAN hopping, DHCP snooping bypass."
+      },
+      {
+        "heading": "Router (Layer 3)",
+        "body": "Connects different networks/subnets and chooses the best path using a routing table. Provides the default gateway, NAT, and often a firewall.\nSecurity: route poisoning, BGP hijacking, ACL misconfiguration."
+      },
+      {
+        "heading": "Firewall",
+        "body": "Filters traffic between zones:\n• Stateless (packet filter) — matches on headers only.\n• Stateful — tracks connection state.\n• NGFW — adds application awareness, IPS, TLS inspection.\n• WAF — protects web apps (Layer 7).\nDeployments: network perimeter, DMZ, host-based (HIDS)."
+      },
+      {
+        "heading": "Wireless Access Point",
+        "body": "Bridges wireless clients to the wired LAN. Security: use WPA3 or WPA2-Enterprise, disable WPS, monitor for rogue APs and Evil Twins."
+      },
+      {
+        "heading": "Other Devices",
+        "body": "• Modem — converts signals between the ISP medium and the local network.\n• Bridge — joins two LAN segments at Layer 2.\n• Repeater — regenerates signals to extend distance.\n• Proxy — intermediary for requests (forward/reverse).\n• Load Balancer — distributes traffic across servers.\n• IDS/IPS — detect (and block) malicious traffic."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "Сетевые устройства работают на разных уровнях OSI и выполняют разные роли. Их понимание необходимо как для проектирования сетей, так и для безопасности."
+      },
+      {
+        "heading": "Концентратор (уровень 1)",
+        "body": "Концентратор (hub) — многопортовый повторитель. Он рассылает входящий сигнал на все порты, создавая единый домен коллизий и общую пропускную способность. Устарел; заменён коммутаторами.\nБезопасность: любой может прослушивать весь трафик; изоляции нет."
+      },
+      {
+        "heading": "Коммутатор (уровень 2)",
+        "body": "Коммутатор (switch) пересылает кадры на основе таблицы MAC-адресов (CAM-таблицы) и обеспечивает полнодуплексные домены коллизий на порт. Возможности: VLAN, транкинг (802.1Q), port security, STP. Коммутаторы уровня 3 добавляют маршрутизацию.\nБезопасность: MAC-флудинг (переполнение CAM), перепрыгивание VLAN, обход DHCP snooping."
+      },
+      {
+        "heading": "Маршрутизатор (уровень 3)",
+        "body": "Соединяет разные сети/подсети и выбирает лучший путь по таблице маршрутизации. Обеспечивает шлюз по умолчанию, NAT и часто брандмауэр.\nБезопасность: отравление маршрутов, перехват BGP, неверная настройка ACL."
+      },
+      {
+        "heading": "Брандмауэр",
+        "body": "Фильтрует трафик между зонами:\n• Stateless (пакетный фильтр) — сопоставление только по заголовкам.\n• Stateful — отслеживание состояния соединений.\n• NGFW — включает контроль приложений, IPS, инспекцию TLS.\n• WAF — защита веб-приложений (уровень 7).\nРазмещение: периметр сети, DMZ, хостовый (HIDS)."
+      },
+      {
+        "heading": "Беспроводная точка доступа",
+        "body": "Связывает беспроводных клиентов с проводной локальной сетью. Безопасность: использовать WPA3 или WPA2-Enterprise, отключить WPS, следить за мошенническими AP и «злыми двойниками»."
+      },
+      {
+        "heading": "Другие устройства",
+        "body": "• Модем — преобразует сигналы между средой провайдера и локальной сетью.\n• Мост — объединяет два сегмента ЛВС на уровне 2.\n• Повторитель — восстанавливает сигнал для увеличения расстояния.\n• Прокси — посредник для запросов (прямой/обратный).\n• Балансировщик нагрузки — распределяет трафик между серверами.\n• IDS/IPS — обнаружение (и блокировка) вредоносного трафика."
+      }
+    ]
+  },
+  {
+    "id": "dhcp_arp",
+    "category": "Networking Fundamentals",
+    "title": "DHCP & ARP",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "ARP — Address Resolution Protocol",
+        "body": "ARP (RFC 826) maps a known IPv4 address to a MAC address on the local segment.\n1. Host broadcasts an ARP Request: \"Who has 192.168.1.1?\"\n2. The owner replies with a unicast ARP Reply containing its MAC.\n3. The result is cached in the ARP table (arp -a / ip neigh).\nARP is broadcast and unauthenticated. Gratuitous ARP announces or updates a mapping without a request."
+      },
+      {
+        "heading": "ARP Attacks & Defense",
+        "body": "ARP Spoofing/Poisoning: an attacker sends forged ARP replies to associate their MAC with the gateway's IP, enabling Man-in-the-Middle or DoS.\nDefense:\n• Dynamic ARP Inspection (DAI) on managed switches\n• Static ARP entries for critical hosts\n• arpwatch / XArp monitoring\n• DHCP snooping (binds IP-MAC via DHCP)\nIPv6 replaces ARP with Neighbor Discovery (NDP) + ICMPv6."
+      },
+      {
+        "heading": "DHCP — Dynamic Host Configuration Protocol",
+        "body": "DHCP (RFC 2131) automatically assigns IP configuration (address, mask, gateway, DNS) using UDP ports 67 (server) and 68 (client).\n\nDORA process:\n1. Discover — client broadcasts for a server\n2. Offer — server proposes an address\n3. Request — client requests the offered address\n4. Acknowledge — server confirms and sets the lease\n\nLeases expire and are renewed (typically at 50% and 87.5% of the lease time)."
+      },
+      {
+        "heading": "DHCP Security",
+        "body": "• Rogue DHCP server: hands out a malicious gateway/DNS -> MITM.\n• DHCP starvation: exhausts the address pool to DoS clients.\nDefense: DHCP snooping, port security, 802.1X.\n\nUseful commands:\n• ipconfig /all (Windows)\n• ip a / ip addr (Linux)\n• ipconfig /release, ipconfig /renew\n• arp -a, ip neigh"
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "ARP — протокол разрешения адресов",
+        "body": "ARP (RFC 826) сопоставляет известный IPv4-адрес с MAC-адресом в локальном сегменте.\n1. Узел широковещательно отправляет ARP-запрос: «Кто владеет 192.168.1.1?»\n2. Владелец отвечает одноадресным ARP-ответом со своим MAC.\n3. Результат кэшируется в ARP-таблице (arp -a / ip neigh).\nARP широковещателен и не аутентифицирован. Gratuitous ARP объявляет или обновляет сопоставление без запроса."
+      },
+      {
+        "heading": "Атаки на ARP и защита",
+        "body": "ARP-спуфинг/отравление: злоумышленник отправляет поддельные ARP-ответы, связывая свой MAC с IP шлюза, что позволяет атаку «человек посередине» или DoS.\nЗащита:\n• Dynamic ARP Inspection (DAI) на управляемых коммутаторах\n• Статические ARP-записи для критичных узлов\n• Мониторинг arpwatch / XArp\n• DHCP snooping (привязка IP-MAC через DHCP)\nВ IPv6 ARP заменяется Neighbor Discovery (NDP) + ICMPv6."
+      },
+      {
+        "heading": "DHCP — протокол динамической конфигурации узла",
+        "body": "DHCP (RFC 2131) автоматически назначает IP-конфигурацию (адрес, маску, шлюз, DNS), используя UDP-порты 67 (сервер) и 68 (клиент).\n\nПроцесс DORA:\n1. Discover — клиент широковещательно ищет сервер\n2. Offer — сервер предлагает адрес\n3. Request — клиент запрашивает предложенный адрес\n4. Acknowledge — сервер подтверждает и устанавливает аренду\n\nАренда истекает и продлевается (обычно на 50% и 87,5% времени аренды)."
+      },
+      {
+        "heading": "Безопасность DHCP",
+        "body": "• Мошеннический DHCP-сервер: выдаёт вредоносный шлюз/DNS -> MITM.\n• DHCP-истощение: исчерпание пула адресов для DoS клиентов.\nЗащита: DHCP snooping, port security, 802.1X.\n\nПолезные команды:\n• ipconfig /all (Windows)\n• ip a / ip addr (Linux)\n• ipconfig /release, ipconfig /renew\n• arp -a, ip neigh"
+      }
+    ]
+  },
+  {
+    "id": "nat_pat",
+    "category": "Networking Fundamentals",
+    "title": "NAT & PAT",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Network Address Translation (RFC 2663) rewrites IP addresses as packets cross between networks, allowing many private hosts to share public addresses and hiding internal topology. It is typically performed by the border router or firewall."
+      },
+      {
+        "heading": "Types of NAT",
+        "body": "• Static NAT (1:1) — fixed public-to-private mapping; used for servers.\n• Dynamic NAT — a pool of public addresses mapped on demand.\n• PAT / NAT Overload (many:1) — many inside hosts share one public IP, distinguished by source port. This is what home routers use.\n• Carrier-Grade NAT (CGNAT, RFC 6598) — ISP-level NAT for 100.64.0.0/10."
+      },
+      {
+        "heading": "Port Forwarding & DMZ",
+        "body": "Port forwarding maps an external port to an internal host (e.g., TCP 443 -> 10.0.0.5:443) so services are reachable from the Internet. A DMZ exposes a host to the Internet in an isolated subnet to limit exposure."
+      },
+      {
+        "heading": "Limitations & Traversal",
+        "body": "NAT breaks true end-to-end connectivity: inbound connections are blocked without a mapping, and protocols embedding IPs in payloads (SIP, FTP active mode, IPsec) can break. Solutions: STUN, TURN, ICE, UPnP, and protocol-aware ALGs."
+      },
+      {
+        "heading": "Security",
+        "body": "NAT is NOT a firewall. It blocks unsolicited inbound by coincidence of the mapping table but offers no inspection of outbound malware or of port-forwarded services. Always pair it with a stateful firewall and logging."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "Network Address Translation (RFC 2663) переписывает IP-адреса при пересечении пакетами границ сетей, позволяя множеству частных узлов совместно использовать публичные адреса и скрывая внутреннюю топологию. Обычно выполняется пограничным маршрутизатором или брандмауэром."
+      },
+      {
+        "heading": "Типы NAT",
+        "body": "• Статический NAT (1:1) — фиксированное сопоставление публичного и частного адресов; для серверов.\n• Динамический NAT — пул публичных адресов, назначаемых по требованию.\n• PAT / NAT Overload (many:1) — множество внутренних узлов используют один публичный IP, различаясь по порту источника. Так работают домашние роутеры.\n• Carrier-Grade NAT (CGNAT, RFC 6598) — NAT на уровне провайдера для 100.64.0.0/10."
+      },
+      {
+        "heading": "Проброс портов и DMZ",
+        "body": "Проброс портов сопоставляет внешний порт с внутренним узлом (например, TCP 443 -> 10.0.0.5:443), делая сервисы доступными из Интернета. DMZ выставляет узел в Интернет в изолированной подсети для ограничения рисков."
+      },
+      {
+        "heading": "Ограничения и обход",
+        "body": "NAT нарушает сквозную связь: входящие соединения блокируются без сопоставления, а протоколы, встраивающие IP в полезную нагрузку (SIP, FTP в активном режиме, IPsec), могут ломаться. Решения: STUN, TURN, ICE, UPnP и ALG, учитывающие протокол."
+      },
+      {
+        "heading": "Безопасность",
+        "body": "NAT — НЕ брандмауэр. Он блокирует незапрошенный входящий трафик лишь по принципу таблицы сопоставления, но не инспектирует исходящее вредоносное ПО и сервисы с проброшенными портами. Всегда сочетайте NAT со stateful-брандмауэром и журналированием."
+      }
+    ]
+  },
+  {
+    "id": "routing_switching",
+    "category": "Networking Fundamentals",
+    "title": "Routing & Switching",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Routing Basics",
+        "body": "Routing is the Layer 3 process of selecting a path between networks. Routers use a routing table and forward packet-by-packet (hop-by-hop).\n• Longest Prefix Match — the most specific route wins.\n• Default route (0.0.0.0/0) — used when no specific route matches.\n• Each hop decrements the TTL; TTL 0 -> ICMP Time Exceeded."
+      },
+      {
+        "heading": "Routing Protocols",
+        "body": "Static — manually configured; simple, no overhead, no automatic failover.\nDynamic — learns routes automatically:\n• Distance Vector: RIP (EIGRP is a hybrid).\n• Link State: OSPF, IS-IS.\n• Path Vector / Exterior: BGP (the Internet's inter-domain protocol).\nMetrics: hop count, bandwidth, delay, cost. Administrative Distance breaks ties between protocols."
+      },
+      {
+        "heading": "Switching Basics",
+        "body": "Switches learn source MACs into a CAM table, forward known unicast to the correct port, and flood unknown/broadcast frames. VLANs (802.1Q) segment a switch into isolated broadcast domains; trunks carry multiple VLANs between switches. Inter-VLAN routing needs a Layer 3 device (router-on-a-stick or L3 switch)."
+      },
+      {
+        "heading": "Spanning Tree Protocol",
+        "body": "STP (802.1D; RSTP 802.1w; MSTP 802.1s) prevents Layer 2 loops by blocking redundant links and electing a root bridge with root ports. Without STP, loops cause broadcast storms that can take down the network."
+      },
+      {
+        "heading": "Security",
+        "body": "• Route poisoning / forged routing updates.\n• BGP hijacking / route leaks.\n• VLAN hopping (DTP abuse, double tagging).\n• STP manipulation (rogue root bridge) -> use BPDU Guard / Root Guard.\n• MAC flooding -> port security, sticky MACs."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Основы маршрутизации",
+        "body": "Маршрутизация — процесс выбора пути между сетями на уровне 3. Маршрутизаторы используют таблицу маршрутизации и пересылают пакеты пошагово (hop-by-hop).\n• Наиболее длинное совпадение префикса — выигрывает самый конкретный маршрут.\n• Маршрут по умолчанию (0.0.0.0/0) — применяется, если нет совпадений.\n• Каждый узел уменьшает TTL; при TTL 0 отправляется ICMP Time Exceeded."
+      },
+      {
+        "heading": "Протоколы маршрутизации",
+        "body": "Статические — настраиваются вручную; простые, без накладных расходов, без автоматического переключения.\nДинамические — изучают маршруты автоматически:\n• Distance Vector: RIP (EIGRP — гибрид).\n• Link State: OSPF, IS-IS.\n• Path Vector / внешние: BGP (междоменный протокол Интернета).\nМетрики: число переходов, пропускная способность, задержка, стоимость. Административная дистанция разрешает конфликты между протоколами."
+      },
+      {
+        "heading": "Основы коммутации",
+        "body": "Коммутаторы изучают MAC-адреса источников в CAM-таблице, пересылают известные одноадресные кадры на нужный порт и рассылают неизвестные/широковещательные кадры. VLAN (802.1Q) делят коммутатор на изолированные широковещательные домены; транки переносят несколько VLAN между коммутаторами. Для маршрутизации между VLAN нужен устройство уровня 3 (router-on-a-stick или L3-коммутатор)."
+      },
+      {
+        "heading": "Протокол связующего дерева (STP)",
+        "body": "STP (802.1D; RSTP 802.1w; MSTP 802.1s) предотвращает петли уровня 2, блокируя резервные каналы и выбирая корневой мост с корневыми портами. Без STP петли вызывают широковещательные штормы, способные обрушить сеть."
+      },
+      {
+        "heading": "Безопасность",
+        "body": "• Отравление маршрутов / поддельные обновления маршрутизации.\n• Перехват BGP / утечки маршрутов.\n• Перепрыгивание VLAN (злоупотребление DTP, двойная тегировка).\n• Манипуляция STP (мошеннический корневой мост) -> BPDU Guard / Root Guard.\n• MAC-флудинг -> port security, sticky MAC."
+      }
+    ]
+  },
+  {
+    "id": "network_types_topologies",
+    "category": "Networking Fundamentals",
+    "title": "Network Types & Topologies",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Network Types by Scale",
+        "body": "• PAN — Personal Area Network (Bluetooth, ~10 m).\n• LAN — Local Area Network (home/office).\n• CAN — Campus Area Network.\n• MAN — Metropolitan Area Network (city).\n• WAN — Wide Area Network (spans countries; the Internet is the largest).\n• SAN — Storage Area Network (block storage).\n• VPN — a logical private network over a public one.\nAlso: Intranet (private internal), Extranet (controlled partner access)."
+      },
+      {
+        "heading": "Topologies",
+        "body": "• Bus — all nodes on one backbone; cheap, single point of failure.\n• Star — all nodes attach to a central device; common, easy to manage.\n• Ring — nodes in a loop; predictable, one break can disrupt.\n• Mesh — nodes interconnected; highly resilient, expensive (full mesh).\n• Tree — hierarchical star/bus combination.\n• Hybrid — a mix of the above."
+      },
+      {
+        "heading": "Architectures & Transmission",
+        "body": "Architectures: Client-Server (centralized control, scalable) vs Peer-to-Peer (no central server, simple).\nTransmission modes:\n• Unicast — one-to-one\n• Multicast — one-to-many (subscribed group)\n• Broadcast — one-to-all on a segment\n• Anycast — one-to-nearest of a group"
+      },
+      {
+        "heading": "Media",
+        "body": "Wired: twisted pair (Cat5e/Cat6), coaxial, fiber optic (single/multi-mode).\nWireless: Wi-Fi, cellular, microwave, satellite.\nChoice depends on distance, bandwidth, cost, and interference/security needs."
+      },
+      {
+        "heading": "Security",
+        "body": "Larger networks widen the attack surface. Use segmentation (VLANs, subnets, DMZs), least privilege, monitoring at chokepoints, and encryption on shared/WAN media."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Типы сетей по масштабу",
+        "body": "• PAN — персональная сеть (Bluetooth, ~10 м).\n• LAN — локальная сеть (дом/офис).\n• CAN — кампусная сеть.\n• MAN — городская сеть.\n• WAN — глобальная сеть (охватывает страны; Интернет — крупнейшая).\n• SAN — сеть хранения данных (блочное хранилище).\n• VPN — логическая частная сеть поверх публичной.\nТакже: Intranet (внутренняя частная), Extranet (контролируемый доступ партнёров)."
+      },
+      {
+        "heading": "Топологии",
+        "body": "• Шина — все узлы на одной магистрали; дёшево, единая точка отказа.\n• Звезда — все узлы подключены к центральному устройству; распространена, проста в управлении.\n• Кольцо — узлы в петле; предсказуемо, разрыв нарушает работу.\n• Ячеистая (mesh) — узлы связаны друг с другом; высокая отказоустойчивость, дорого (полная ячеистая).\n• Дерево — иерархическая комбинация звезды/шины.\n• Гибридная — сочетание перечисленных."
+      },
+      {
+        "heading": "Архитектуры и передача",
+        "body": "Архитектуры: клиент-сервер (централизованное управление, масштабируемость) и одноранговая (P2P, без центрального сервера, простота).\nРежимы передачи:\n• Unicast — один-к-одному\n• Multicast — один-ко-многим (по подписке)\n• Broadcast — один-ко-всем в сегменте\n• Anycast — один-к-ближайшему из группы"
+      },
+      {
+        "heading": "Среды передачи",
+        "body": "Проводные: витая пара (Cat5e/Cat6), коаксиальный кабель, оптоволокно (одно/многомодовое).\nБеспроводные: Wi-Fi, сотовая связь, микроволны, спутник.\nВыбор зависит от расстояния, пропускной способности, стоимости и требований к помехам/безопасности."
+      },
+      {
+        "heading": "Безопасность",
+        "body": "Крупные сети расширяют поверхность атаки. Используйте сегментацию (VLAN, подсети, DMZ), минимальные привилегии, мониторинг в узловых точках и шифрование на общих/WAN-средах."
+      }
+    ]
+  },
+  {
+    "id": "vpn_tunneling",
+    "category": "Networking Fundamentals",
+    "title": "VPN & Tunneling",
+    "icon": "network",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "A Virtual Private Network creates an encrypted tunnel over an untrusted network (usually the Internet), giving remote users or sites a private, authenticated path. It provides confidentiality, integrity, and authentication of traffic."
+      },
+      {
+        "heading": "VPN Types",
+        "body": "• Remote-Access VPN — individual users connect (client-to-site).\n• Site-to-Site VPN — connects whole networks (e.g., branch to HQ).\n• Full Tunnel — all traffic routes through the VPN.\n• Split Tunnel — only corporate traffic uses the VPN (offers less protection)."
+      },
+      {
+        "heading": "VPN Protocols",
+        "body": "• IPsec — suite with AH (integrity) and ESP (encryption); uses IKE for key exchange; transport mode (payload only) or tunnel mode (whole packet). Common in site-to-site.\n• SSL/TLS VPN — OpenVPN, OpenConnect, clientless web portals. Traverses firewalls easily via TCP 443.\n• WireGuard — modern, small, fast; uses the Noise protocol framework.\n• IKEv2/IPsec — mobile-friendly with reconnection.\n• L2TP/IPsec — no encryption of its own, relies on IPsec.\n• PPTP — obsolete and broken; do not use."
+      },
+      {
+        "heading": "Tunneling Protocols",
+        "body": "GRE (Generic Routing Encapsulation) and IP-in-IP wrap one protocol inside another to build virtual links; GRE has no encryption, so it is usually combined with IPsec."
+      },
+      {
+        "heading": "Security Considerations",
+        "body": "• A VPN encrypts transport, it does NOT prevent malware, phishing, or compromised credentials.\n• Split tunneling can leak traffic outside the tunnel.\n• Centralize logging, enforce MFA, and rotate keys.\n• Modern direction: Zero Trust Network Access (ZTNA) instead of broad network tunnels."
+      }
+    ],
+    "sections_ru": [
+      {
+        "heading": "Обзор",
+        "body": "Виртуальная частная сеть (VPN) создаёт шифрованный туннель поверх недоверенной сети (обычно Интернета), давая удалённым пользователям или площадкам частный аутентифицированный путь. Обеспечивает конфиденциальность, целостность и аутентификацию трафика."
+      },
+      {
+        "heading": "Типы VPN",
+        "body": "• VPN удалённого доступа — подключаются отдельные пользователи (клиент-сайт).\n• VPN «сайт-сайт» — соединяет целые сети (например, филиал с головным офисом).\n• Полный туннель — весь трафик идёт через VPN.\n• Разделённый туннель (split tunnel) — через VPN идёт только корпоративный трафик (меньше защиты)."
+      },
+      {
+        "heading": "Протоколы VPN",
+        "body": "• IPsec — набор с AH (целостность) и ESP (шифрование); использует IKE для обмена ключами; транспортный режим (только полезная нагрузка) или туннельный (весь пакет). Обычен для «сайт-сайт».\n• SSL/TLS VPN — OpenVPN, OpenConnect, веб-порталы без клиента. Легко проходит брандмауэры через TCP 443.\n• WireGuard — современный, компактный, быстрый; использует Noise protocol framework.\n• IKEv2/IPsec — удобен для мобильных с переподключением.\n• L2TP/IPsec — своего шифрования нет, полагается на IPsec.\n• PPTP — устарел и взломан; не использовать."
+      },
+      {
+        "heading": "Протоколы туннелирования",
+        "body": "GRE (Generic Routing Encapsulation) и IP-in-IP инкапсулируют один протокол в другой для создания виртуальных каналов; GRE не шифрует, поэтому обычно применяется вместе с IPsec."
+      },
+      {
+        "heading": "Вопросы безопасности",
+        "body": "• VPN шифрует транспорт, но НЕ предотвращает вредоносное ПО, фишинг или компрометацию учётных данных.\n• Разделённый туннель может пропускать трафик мимо туннеля.\n• Централизуйте журналирование, внедряйте MFA и ротацию ключей.\n• Современное направление: Zero Trust Network Access (ZTNA) вместо широких сетевых туннелей."
+      }
+    ]
+  },
+  {
     "id": "malware_types",
     "category": "Threats & Attacks",
     "title": "Malware — Types & Analysis",
