@@ -35374,5 +35374,1061 @@
       "PPTP"
     ],
     "id": 323
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "How many layers are in the OSI model?",
+    "text_ru": "Сколько уровней в модели OSI?",
+    "answer": "7",
+    "options": [
+      "7",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer_ru": "7",
+    "options_ru": [
+      "7",
+      "4",
+      "5",
+      "6"
+    ],
+    "id": 2062
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "How many layers are in the TCP/IP model (per RFC 1122)?",
+    "text_ru": "Сколько уровней в модели TCP/IP (согласно RFC 1122)?",
+    "answer": "4",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer_ru": "4",
+    "options_ru": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "id": 2063
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which networking model was developed first?",
+    "text_ru": "Какая сетевая модель была разработана раньше?",
+    "answer": "TCP/IP",
+    "options": [
+      "TCP/IP",
+      "OSI",
+      "Both were developed at the same time",
+      "Neither, they are unrelated"
+    ],
+    "answer_ru": "TCP/IP",
+    "options_ru": [
+      "TCP/IP",
+      "OSI",
+      "Обе разработаны одновременно",
+      "Ни одна, они не связаны"
+    ],
+    "id": 2064
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which model is a theoretical reference framework rather than a protocol-based model?",
+    "text_ru": "Какая модель является теоретической эталонной, а не основанной на протоколах?",
+    "answer": "OSI",
+    "options": [
+      "OSI",
+      "TCP/IP",
+      "Both are protocol models",
+      "Both are reference models"
+    ],
+    "answer_ru": "OSI",
+    "options_ru": [
+      "OSI",
+      "TCP/IP",
+      "Обе являются протокольными моделями",
+      "Обе являются эталонными моделями"
+    ],
+    "id": 2065
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which model does the Internet actually run on?",
+    "text_ru": "На какой модели фактически работает Интернет?",
+    "answer": "TCP/IP",
+    "options": [
+      "TCP/IP",
+      "OSI",
+      "Both equally",
+      "Neither"
+    ],
+    "answer_ru": "TCP/IP",
+    "options_ru": [
+      "TCP/IP",
+      "OSI",
+      "На обеих в равной мере",
+      "Ни на одной"
+    ],
+    "id": 2066
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What does OSI stand for?",
+    "text_ru": "Как расшифровывается OSI?",
+    "answer": "Open Systems Interconnection",
+    "options": [
+      "Open Systems Interconnection",
+      "Open Source Internet",
+      "Operating System Interface",
+      "Open Security Integration"
+    ],
+    "answer_ru": "Взаимодействие открытых систем",
+    "options_ru": [
+      "Взаимодействие открытых систем",
+      "Открытый исходный интернет",
+      "Интерфейс операционной системы",
+      "Интеграция открытой безопасности"
+    ],
+    "id": 2067
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What does TCP/IP stand for?",
+    "text_ru": "Как расшифровывается TCP/IP?",
+    "answer": "Transmission Control Protocol / Internet Protocol",
+    "options": [
+      "Transmission Control Protocol / Internet Protocol",
+      "Transport Control Program / Internal Protocol",
+      "Total Control Protocol / Integrated Protocol",
+      "Transfer Connection Program / Internet Program"
+    ],
+    "answer_ru": "Протокол управления передачей / Межсетевой протокол",
+    "options_ru": [
+      "Протокол управления передачей / Межсетевой протокол",
+      "Транспортная управляющая программа / внутренний протокол",
+      "Общий протокол управления / интегрированный протокол",
+      "Программа передачи соединений / интернет-программа"
+    ],
+    "id": 2068
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which organization developed the OSI model?",
+    "text_ru": "Какая организация разработала модель OSI?",
+    "answer": "ISO",
+    "options": [
+      "ISO",
+      "IEEE",
+      "IETF",
+      "DARPA"
+    ],
+    "answer_ru": "ISO",
+    "options_ru": [
+      "ISO",
+      "IEEE",
+      "IETF",
+      "DARPA"
+    ],
+    "id": 2069
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which agency originally developed the TCP/IP model?",
+    "text_ru": "Какое агентство изначально разработало модель TCP/IP?",
+    "answer": "DARPA",
+    "options": [
+      "DARPA",
+      "ISO",
+      "IEEE",
+      "W3C"
+    ],
+    "answer_ru": "DARPA",
+    "options_ru": [
+      "DARPA",
+      "ISO",
+      "IEEE",
+      "W3C"
+    ],
+    "id": 2070
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which model is described as a protocol model because it maps directly to real protocols?",
+    "text_ru": "Какую модель называют протокольной, поскольку она напрямую соответствует реальным протоколам?",
+    "answer": "TCP/IP",
+    "options": [
+      "TCP/IP",
+      "OSI",
+      "Both",
+      "Neither"
+    ],
+    "answer_ru": "TCP/IP",
+    "options_ru": [
+      "TCP/IP",
+      "OSI",
+      "Обе",
+      "Ни одну"
+    ],
+    "id": 2071
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer is responsible for transmitting raw bits over a physical medium?",
+    "text_ru": "Какой уровень OSI отвечает за передачу необработанных битов по физической среде?",
+    "answer": "Layer 1 - Physical",
+    "options": [
+      "Layer 1 - Physical",
+      "Layer 2 - Data Link",
+      "Layer 3 - Network",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 1 - Физический",
+    "options_ru": [
+      "Уровень 1 - Физический",
+      "Уровень 2 - Канальный",
+      "Уровень 3 - Сетевой",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2072
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer handles framing and MAC addressing?",
+    "text_ru": "Какой уровень OSI выполняет формирование кадров и MAC-адресацию?",
+    "answer": "Layer 2 - Data Link",
+    "options": [
+      "Layer 2 - Data Link",
+      "Layer 1 - Physical",
+      "Layer 3 - Network",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 2 - Канальный",
+    "options_ru": [
+      "Уровень 2 - Канальный",
+      "Уровень 1 - Физический",
+      "Уровень 3 - Сетевой",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2073
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer is responsible for logical addressing and routing?",
+    "text_ru": "Какой уровень OSI отвечает за логическую адресацию и маршрутизацию?",
+    "answer": "Layer 3 - Network",
+    "options": [
+      "Layer 3 - Network",
+      "Layer 2 - Data Link",
+      "Layer 4 - Transport",
+      "Layer 5 - Session"
+    ],
+    "answer_ru": "Уровень 3 - Сетевой",
+    "options_ru": [
+      "Уровень 3 - Сетевой",
+      "Уровень 2 - Канальный",
+      "Уровень 4 - Транспортный",
+      "Уровень 5 - Сеансовый"
+    ],
+    "id": 2074
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer provides reliable end-to-end delivery and flow control?",
+    "text_ru": "Какой уровень OSI обеспечивает надёжную доставку между узлами и управление потоком?",
+    "answer": "Layer 4 - Transport",
+    "options": [
+      "Layer 4 - Transport",
+      "Layer 3 - Network",
+      "Layer 5 - Session",
+      "Layer 6 - Presentation"
+    ],
+    "answer_ru": "Уровень 4 - Транспортный",
+    "options_ru": [
+      "Уровень 4 - Транспортный",
+      "Уровень 3 - Сетевой",
+      "Уровень 5 - Сеансовый",
+      "Уровень 6 - Уровень представления"
+    ],
+    "id": 2075
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer establishes, manages, and terminates sessions?",
+    "text_ru": "Какой уровень OSI устанавливает, поддерживает и завершает сеансы?",
+    "answer": "Layer 5 - Session",
+    "options": [
+      "Layer 5 - Session",
+      "Layer 4 - Transport",
+      "Layer 6 - Presentation",
+      "Layer 7 - Application"
+    ],
+    "answer_ru": "Уровень 5 - Сеансовый",
+    "options_ru": [
+      "Уровень 5 - Сеансовый",
+      "Уровень 4 - Транспортный",
+      "Уровень 6 - Уровень представления",
+      "Уровень 7 - Прикладной"
+    ],
+    "id": 2076
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer handles encryption, compression, and data translation?",
+    "text_ru": "Какой уровень OSI выполняет шифрование, сжатие и преобразование данных?",
+    "answer": "Layer 6 - Presentation",
+    "options": [
+      "Layer 6 - Presentation",
+      "Layer 5 - Session",
+      "Layer 7 - Application",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 6 - Уровень представления",
+    "options_ru": [
+      "Уровень 6 - Уровень представления",
+      "Уровень 5 - Сеансовый",
+      "Уровень 7 - Прикладной",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2077
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer is closest to the end user and includes HTTP, DNS, and SMTP?",
+    "text_ru": "Какой уровень OSI ближе всего к пользователю и включает HTTP, DNS и SMTP?",
+    "answer": "Layer 7 - Application",
+    "options": [
+      "Layer 7 - Application",
+      "Layer 6 - Presentation",
+      "Layer 5 - Session",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 7 - Прикладной",
+    "options_ru": [
+      "Уровень 7 - Прикладной",
+      "Уровень 6 - Уровень представления",
+      "Уровень 5 - Сеансовый",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2078
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer is directly above the Transport layer?",
+    "text_ru": "Какой уровень OSI находится непосредственно над транспортным уровнем?",
+    "answer": "Layer 5 - Session",
+    "options": [
+      "Layer 5 - Session",
+      "Layer 6 - Presentation",
+      "Layer 3 - Network",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 5 - Сеансовый",
+    "options_ru": [
+      "Уровень 5 - Сеансовый",
+      "Уровень 6 - Уровень представления",
+      "Уровень 3 - Сетевой",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2079
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which OSI layer is directly below the Network layer?",
+    "text_ru": "Какой уровень OSI находится непосредственно под сетевым уровнем?",
+    "answer": "Layer 2 - Data Link",
+    "options": [
+      "Layer 2 - Data Link",
+      "Layer 1 - Physical",
+      "Layer 4 - Transport",
+      "Layer 3 - Network"
+    ],
+    "answer_ru": "Уровень 2 - Канальный",
+    "options_ru": [
+      "Уровень 2 - Канальный",
+      "Уровень 1 - Физический",
+      "Уровень 4 - Транспортный",
+      "Уровень 3 - Сетевой"
+    ],
+    "id": 2080
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "At which OSI layer does a network switch primarily operate?",
+    "text_ru": "На каком уровне OSI в основном работает сетевой коммутатор?",
+    "answer": "Layer 2 - Data Link",
+    "options": [
+      "Layer 2 - Data Link",
+      "Layer 1 - Physical",
+      "Layer 3 - Network",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 2 - Канальный",
+    "options_ru": [
+      "Уровень 2 - Канальный",
+      "Уровень 1 - Физический",
+      "Уровень 3 - Сетевой",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2081
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "At which OSI layer does a router primarily operate?",
+    "text_ru": "На каком уровне OSI в основном работает маршрутизатор?",
+    "answer": "Layer 3 - Network",
+    "options": [
+      "Layer 3 - Network",
+      "Layer 2 - Data Link",
+      "Layer 4 - Transport",
+      "Layer 7 - Application"
+    ],
+    "answer_ru": "Уровень 3 - Сетевой",
+    "options_ru": [
+      "Уровень 3 - Сетевой",
+      "Уровень 2 - Канальный",
+      "Уровень 4 - Транспортный",
+      "Уровень 7 - Прикладной"
+    ],
+    "id": 2082
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "At which OSI layer does a hub operate?",
+    "text_ru": "На каком уровне OSI работает концентратор (hub)?",
+    "answer": "Layer 1 - Physical",
+    "options": [
+      "Layer 1 - Physical",
+      "Layer 2 - Data Link",
+      "Layer 3 - Network",
+      "Layer 7 - Application"
+    ],
+    "answer_ru": "Уровень 1 - Физический",
+    "options_ru": [
+      "Уровень 1 - Физический",
+      "Уровень 2 - Канальный",
+      "Уровень 3 - Сетевой",
+      "Уровень 7 - Прикладной"
+    ],
+    "id": 2083
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "At which OSI layer does a web application firewall (WAF) primarily operate?",
+    "text_ru": "На каком уровне OSI в основном работает брандмауэр веб-приложений (WAF)?",
+    "answer": "Layer 7 - Application",
+    "options": [
+      "Layer 7 - Application",
+      "Layer 2 - Data Link",
+      "Layer 3 - Network",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 7 - Прикладной",
+    "options_ru": [
+      "Уровень 7 - Прикладной",
+      "Уровень 2 - Канальный",
+      "Уровень 3 - Сетевой",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2084
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "At which OSI layer does a SYN flood attack primarily occur?",
+    "text_ru": "На каком уровне OSI в основном происходит атака SYN-флуд?",
+    "answer": "Layer 4 - Transport",
+    "options": [
+      "Layer 4 - Transport",
+      "Layer 2 - Data Link",
+      "Layer 3 - Network",
+      "Layer 7 - Application"
+    ],
+    "answer_ru": "Уровень 4 - Транспортный",
+    "options_ru": [
+      "Уровень 4 - Транспортный",
+      "Уровень 2 - Канальный",
+      "Уровень 3 - Сетевой",
+      "Уровень 7 - Прикладной"
+    ],
+    "id": 2085
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "At which OSI layer does a MAC flooding attack occur?",
+    "text_ru": "На каком уровне OSI происходит атака MAC-флудинг?",
+    "answer": "Layer 2 - Data Link",
+    "options": [
+      "Layer 2 - Data Link",
+      "Layer 1 - Physical",
+      "Layer 3 - Network",
+      "Layer 4 - Transport"
+    ],
+    "answer_ru": "Уровень 2 - Канальный",
+    "options_ru": [
+      "Уровень 2 - Канальный",
+      "Уровень 1 - Физический",
+      "Уровень 3 - Сетевой",
+      "Уровень 4 - Транспортный"
+    ],
+    "id": 2086
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "The mnemonic 'Please Do Not Throw Sausage Pizza Away' represents the layers of which model?",
+    "text_ru": "Мнемоника 'Please Do Not Throw Sausage Pizza Away' обозначает уровни какой модели?",
+    "answer": "OSI model",
+    "options": [
+      "OSI model",
+      "TCP/IP model",
+      "CIA triad",
+      "Bell-LaPadula model"
+    ],
+    "answer_ru": "Модель OSI",
+    "options_ru": [
+      "Модель OSI",
+      "Модель TCP/IP",
+      "Триада CIA",
+      "Модель Белла — ЛаПадулы"
+    ],
+    "id": 2087
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which mnemonic lists the OSI layers from Layer 7 down to Layer 1?",
+    "text_ru": "Какая мнемоника перечисляет уровни OSI от 7-го к 1-му?",
+    "answer": "All People Seem To Need Data Processing",
+    "options": [
+      "All People Seem To Need Data Processing",
+      "Please Do Not Throw Sausage Pizza Away",
+      "Every Good Boy Does Fine",
+      "My Very Educated Mother Just Served Us Noodles"
+    ],
+    "answer_ru": "All People Seem To Need Data Processing",
+    "options_ru": [
+      "All People Seem To Need Data Processing",
+      "Please Do Not Throw Sausage Pizza Away",
+      "Every Good Boy Does Fine",
+      "My Very Educated Mother Just Served Us Noodles"
+    ],
+    "id": 2088
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which layer of the TCP/IP model corresponds to the OSI Network layer?",
+    "text_ru": "Какой уровень модели TCP/IP соответствует сетевому уровню OSI?",
+    "answer": "Internet",
+    "options": [
+      "Internet",
+      "Transport",
+      "Network Access",
+      "Application"
+    ],
+    "answer_ru": "Межсетевой",
+    "options_ru": [
+      "Межсетевой",
+      "Транспортный",
+      "Доступ к сети",
+      "Прикладной"
+    ],
+    "id": 2089
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which layer of the TCP/IP model corresponds to the OSI Transport layer?",
+    "text_ru": "Какой уровень модели TCP/IP соответствует транспортному уровню OSI?",
+    "answer": "Transport",
+    "options": [
+      "Transport",
+      "Internet",
+      "Application",
+      "Network Access"
+    ],
+    "answer_ru": "Транспортный",
+    "options_ru": [
+      "Транспортный",
+      "Межсетевой",
+      "Прикладной",
+      "Доступ к сети"
+    ],
+    "id": 2090
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "The TCP/IP Application layer corresponds to which OSI layers?",
+    "text_ru": "Прикладному уровню TCP/IP соответствуют какие уровни OSI?",
+    "answer": "OSI layers 5, 6, and 7",
+    "options": [
+      "OSI layers 5, 6, and 7",
+      "OSI layers 1 and 2",
+      "OSI layers 3 and 4",
+      "OSI layers 2, 3, and 4"
+    ],
+    "answer_ru": "Уровни OSI 5, 6 и 7",
+    "options_ru": [
+      "Уровни OSI 5, 6 и 7",
+      "Уровни OSI 1 и 2",
+      "Уровни OSI 3 и 4",
+      "Уровни OSI 2, 3 и 4"
+    ],
+    "id": 2091
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "The TCP/IP Network Access layer corresponds to which OSI layers?",
+    "text_ru": "Уровню доступа к сети TCP/IP соответствуют какие уровни OSI?",
+    "answer": "OSI layers 1 and 2",
+    "options": [
+      "OSI layers 1 and 2",
+      "OSI layers 5, 6, and 7",
+      "OSI layers 3 and 4",
+      "OSI layer 4 only"
+    ],
+    "answer_ru": "Уровни OSI 1 и 2",
+    "options_ru": [
+      "Уровни OSI 1 и 2",
+      "Уровни OSI 5, 6 и 7",
+      "Уровни OSI 3 и 4",
+      "Только уровень OSI 4"
+    ],
+    "id": 2092
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which protocols belong to the TCP/IP Internet layer?",
+    "text_ru": "Какие протоколы относятся к межсетевому уровню TCP/IP?",
+    "answer": "IP, ICMP, and ARP",
+    "options": [
+      "IP, ICMP, and ARP",
+      "TCP and UDP",
+      "HTTP and DNS",
+      "Ethernet and Wi-Fi"
+    ],
+    "answer_ru": "IP, ICMP и ARP",
+    "options_ru": [
+      "IP, ICMP и ARP",
+      "TCP и UDP",
+      "HTTP и DNS",
+      "Ethernet и Wi-Fi"
+    ],
+    "id": 2093
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which protocols belong to the TCP/IP Transport layer?",
+    "text_ru": "Какие протоколы относятся к транспортному уровню TCP/IP?",
+    "answer": "TCP and UDP",
+    "options": [
+      "TCP and UDP",
+      "IP and ICMP",
+      "HTTP and FTP",
+      "ARP and Ethernet"
+    ],
+    "answer_ru": "TCP и UDP",
+    "options_ru": [
+      "TCP и UDP",
+      "IP и ICMP",
+      "HTTP и FTP",
+      "ARP и Ethernet"
+    ],
+    "id": 2094
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which protocol provides reliable, connection-oriented delivery?",
+    "text_ru": "Какой протокол обеспечивает надёжную доставку с установкой соединения?",
+    "answer": "TCP",
+    "options": [
+      "TCP",
+      "UDP",
+      "IP",
+      "ICMP"
+    ],
+    "answer_ru": "TCP",
+    "options_ru": [
+      "TCP",
+      "UDP",
+      "IP",
+      "ICMP"
+    ],
+    "id": 2095
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which protocol provides fast, connectionless delivery?",
+    "text_ru": "Какой протокол обеспечивает быструю доставку без установки соединения?",
+    "answer": "UDP",
+    "options": [
+      "UDP",
+      "TCP",
+      "IP",
+      "ARP"
+    ],
+    "answer_ru": "UDP",
+    "options_ru": [
+      "UDP",
+      "TCP",
+      "IP",
+      "ARP"
+    ],
+    "id": 2096
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which TCP/IP layer combines the functions of OSI Session, Presentation, and Application layers?",
+    "text_ru": "Какой уровень TCP/IP объединяет функции сеансового, представительского и прикладного уровней OSI?",
+    "answer": "Application",
+    "options": [
+      "Application",
+      "Transport",
+      "Internet",
+      "Network Access"
+    ],
+    "answer_ru": "Прикладной",
+    "options_ru": [
+      "Прикладной",
+      "Транспортный",
+      "Межсетевой",
+      "Доступ к сети"
+    ],
+    "id": 2097
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "In the five-layer TCP/IP model, which two layers replace the single Network Access layer?",
+    "text_ru": "В пятиуровневой модели TCP/IP какие два уровня заменяют единый уровень доступа к сети?",
+    "answer": "Data Link and Physical",
+    "options": [
+      "Data Link and Physical",
+      "Session and Presentation",
+      "Network and Transport",
+      "Application and Transport"
+    ],
+    "answer_ru": "Канальный и Физический",
+    "options_ru": [
+      "Канальный и Физический",
+      "Сеансовый и Представительский",
+      "Сетевой и Транспортный",
+      "Прикладной и Транспортный"
+    ],
+    "id": 2098
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "As data moves down the layers, what is added at each layer?",
+    "text_ru": "При движении данных вниз по уровням что добавляется на каждом уровне?",
+    "answer": "A header (plus a trailer at the data link layer)",
+    "options": [
+      "A header (plus a trailer at the data link layer)",
+      "A trailer only",
+      "Nothing, the data is unchanged",
+      "Compression information"
+    ],
+    "answer_ru": "Заголовок (плюс трейлер на канальном уровне)",
+    "options_ru": [
+      "Заголовок (плюс трейлер на канальном уровне)",
+      "Только трейлер",
+      "Ничего, данные не меняются",
+      "Информация о сжатии"
+    ],
+    "id": 2099
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What is the PDU (data unit) name at the Transport layer?",
+    "text_ru": "Как называется единица данных (PDU) на транспортном уровне?",
+    "answer": "Segment",
+    "options": [
+      "Segment",
+      "Packet",
+      "Frame",
+      "Bits"
+    ],
+    "answer_ru": "Сегмент",
+    "options_ru": [
+      "Сегмент",
+      "Пакет",
+      "Кадр",
+      "Биты"
+    ],
+    "id": 2100
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What is the PDU (data unit) name at the Network layer?",
+    "text_ru": "Как называется единица данных (PDU) на сетевом уровне?",
+    "answer": "Packet",
+    "options": [
+      "Packet",
+      "Segment",
+      "Frame",
+      "Bits"
+    ],
+    "answer_ru": "Пакет",
+    "options_ru": [
+      "Пакет",
+      "Сегмент",
+      "Кадр",
+      "Биты"
+    ],
+    "id": 2101
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What is the PDU (data unit) name at the Data Link layer?",
+    "text_ru": "Как называется единица данных (PDU) на канальном уровне?",
+    "answer": "Frame",
+    "options": [
+      "Frame",
+      "Packet",
+      "Segment",
+      "Bits"
+    ],
+    "answer_ru": "Кадр",
+    "options_ru": [
+      "Кадр",
+      "Пакет",
+      "Сегмент",
+      "Биты"
+    ],
+    "id": 2102
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What is the PDU (data unit) name at the Physical layer?",
+    "text_ru": "Как называется единица данных (PDU) на физическом уровне?",
+    "answer": "Bits",
+    "options": [
+      "Bits",
+      "Frames",
+      "Packets",
+      "Segments"
+    ],
+    "answer_ru": "Биты",
+    "options_ru": [
+      "Биты",
+      "Кадры",
+      "Пакеты",
+      "Сегменты"
+    ],
+    "id": 2103
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What is the correct encapsulation order from top to bottom?",
+    "text_ru": "Каков правильный порядок инкапсуляции сверху вниз?",
+    "answer": "Data -> Segment -> Packet -> Frame -> Bits",
+    "options": [
+      "Data -> Segment -> Packet -> Frame -> Bits",
+      "Bits -> Frame -> Packet -> Segment -> Data",
+      "Data -> Packet -> Segment -> Frame -> Bits",
+      "Segment -> Data -> Frame -> Packet -> Bits"
+    ],
+    "answer_ru": "Данные -> Сегмент -> Пакет -> Кадр -> Биты",
+    "options_ru": [
+      "Данные -> Сегмент -> Пакет -> Кадр -> Биты",
+      "Биты -> Кадр -> Пакет -> Сегмент -> Данные",
+      "Данные -> Пакет -> Сегмент -> Кадр -> Биты",
+      "Сегмент -> Данные -> Кадр -> Пакет -> Биты"
+    ],
+    "id": 2104
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "What is the process of removing headers as data moves up the stack called?",
+    "text_ru": "Как называется процесс удаления заголовков при движении данных вверх по стеку?",
+    "answer": "De-encapsulation",
+    "options": [
+      "De-encapsulation",
+      "Fragmentation",
+      "Encapsulation",
+      "Multiplexing"
+    ],
+    "answer_ru": "Декапсуляция",
+    "options_ru": [
+      "Декапсуляция",
+      "Фрагментация",
+      "Инкапсуляция",
+      "Мультиплексирование"
+    ],
+    "id": 2105
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "Which statement best describes a key difference between the OSI and TCP/IP models?",
+    "text_ru": "Какое утверждение лучше всего описывает ключевое различие моделей OSI и TCP/IP?",
+    "answer": "OSI has 7 theoretical layers; TCP/IP has 4 layers mapped to real protocols",
+    "options": [
+      "OSI has 7 theoretical layers; TCP/IP has 4 layers mapped to real protocols",
+      "OSI is used by the Internet; TCP/IP is only theoretical",
+      "Both models have exactly 7 layers",
+      "TCP/IP has more layers than OSI"
+    ],
+    "answer_ru": "OSI имеет 7 теоретических уровней; TCP/IP — 4 уровня, соответствующих реальным протоколам",
+    "options_ru": [
+      "OSI имеет 7 теоретических уровней; TCP/IP — 4 уровня, соответствующих реальным протоколам",
+      "OSI используется в Интернете; TCP/IP лишь теоретическая",
+      "Обе модели имеют ровно 7 уровней",
+      "В TCP/IP больше уровней, чем в OSI"
+    ],
+    "id": 2106
+  },
+  {
+    "topic": "network",
+    "type": "choice",
+    "text": "How do the layer counts of the two models compare?",
+    "text_ru": "Как соотносятся количества уровней двух моделей?",
+    "answer": "OSI has 7 layers; TCP/IP has 4",
+    "options": [
+      "OSI has 7 layers; TCP/IP has 4",
+      "OSI has 4 layers; TCP/IP has 7",
+      "Both have 5 layers",
+      "Both have 7 layers"
+    ],
+    "answer_ru": "В OSI 7 уровней; в TCP/IP — 4",
+    "options_ru": [
+      "В OSI 7 уровней; в TCP/IP — 4",
+      "В OSI 4 уровня; в TCP/IP — 7",
+      "Обе имеют 5 уровней",
+      "Обе имеют 7 уровней"
+    ],
+    "id": 2107
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "How many layers are in the OSI model?",
+    "text_ru": "Сколько уровней в модели OSI?",
+    "answer": "7",
+    "answer_ru": "7",
+    "id": 2108
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "How many layers are in the TCP/IP model?",
+    "text_ru": "Сколько уровней в модели TCP/IP?",
+    "answer": "4",
+    "answer_ru": "4",
+    "id": 2109
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "What does OSI stand for?",
+    "text_ru": "Как расшифровывается OSI?",
+    "answer": "Open Systems Interconnection",
+    "answer_ru": "Взаимодействие открытых систем",
+    "id": 2110
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "Name the four TCP/IP layers from top to bottom.",
+    "text_ru": "Назовите четыре уровня TCP/IP сверху вниз.",
+    "answer": "Application, Transport, Internet, Network Access",
+    "answer_ru": "Прикладной, Транспортный, Межсетевой, Доступ к сети",
+    "id": 2111
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "What is the data unit (PDU) name at the Data Link layer?",
+    "text_ru": "Как называется единица данных (PDU) на канальном уровне?",
+    "answer": "Frame",
+    "answer_ru": "Кадр",
+    "id": 2112
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "At which OSI layer does TCP operate?",
+    "text_ru": "На каком уровне OSI работает TCP?",
+    "answer": "Transport (Layer 4)",
+    "answer_ru": "Транспортный (уровень 4)",
+    "id": 2113
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "At which OSI layer does IP operate?",
+    "text_ru": "На каком уровне OSI работает IP?",
+    "answer": "Network (Layer 3)",
+    "answer_ru": "Сетевой (уровень 3)",
+    "id": 2114
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "Which OSI layer handles encryption and compression?",
+    "text_ru": "Какой уровень OSI выполняет шифрование и сжатие?",
+    "answer": "Presentation (Layer 6)",
+    "answer_ru": "Уровень представления (уровень 6)",
+    "id": 2115
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "What is the process of adding headers as data moves down the stack called?",
+    "text_ru": "Как называется процесс добавления заголовков при движении данных вниз по стеку?",
+    "answer": "Encapsulation",
+    "answer_ru": "Инкапсуляция",
+    "id": 2116
+  },
+  {
+    "topic": "network",
+    "type": "text",
+    "text": "Which model has a Network Access layer, OSI or TCP/IP?",
+    "text_ru": "В какой модели есть уровень доступа к сети — OSI или TCP/IP?",
+    "answer": "TCP/IP",
+    "answer_ru": "TCP/IP",
+    "id": 2117
   }
 ]
